@@ -1,22 +1,20 @@
-def sort_numbers_descending():
+def print_highest_number():
     numbers = []  
     while True:
         try:
             num = int(input("Enter a number: "))
-            numbers.append(num) 
+            numbers.append(num)     
+        
+        #will stop the loop if the user enters a non-integer value 
         except ValueError:
-            print("Invalid input. Sorting and displaying numbers...")
+            print("Invalid input. Please enter a valid number.")
             break
-    
-    # Sort numbers in descending order
-   
-    numbers.sort(reverse=True)
-    
-    # Display sorted numbers
-   
-    print("Numbers from highest to lowest:", numbers)
+    if numbers: 
+        
+        #max to get the highest number
+        print("Highest number:", max(numbers)) 
 
 if __name__ == "__main__":
-    sort_numbers_descending()
+    print_highest_number()
 
 
